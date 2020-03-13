@@ -1,6 +1,6 @@
 <template>
   <button class="btn" :class="size" :style="styleObject" @click="onClick">
-    <i :class="icon" class="i"></i>
+    <i :class="`fas fa-${icon}`" class="i"></i>
     <slot></slot>
   </button>
 </template>
@@ -8,7 +8,23 @@
 <script>
   export default {
     name: 'CustomBtn',
-    props: ['size', 'icon', 'styleObject'],
+    props: {
+      size: {
+        type: String,
+        required: true
+      },
+      icon: String,
+      styleObject: {
+        type: Object,
+        default: function () {
+          return {
+          color: '#000',
+          background: '#fff',
+          fontSize: '16px'
+          }
+        }
+      },
+    },
     data() {
       return {
         event: this.$event,
@@ -36,7 +52,7 @@
     text-align: center;
 
     &:hover {
-      color: rgb(211, 39, 39);
+      color: rgb(195, 22, 22);
       transform: scale(1.1);
     }
   }

@@ -13,18 +13,18 @@
           fontSize: '25px'
         }"
     :size="'lg'"
-    :icon="'fas fa-code'"
+    :icon="'code'"
     >My large btn</v-button>
 
     <v-button 
     @click="consoleClick($event)"
     :styleObject="{
-          color: 'white',
-          background: 'black',
-          fontSize: '15px'
+          color: '',
+          background: '',
+          fontSize: ''
         }"
     :size="'md'"
-    :icon="'fas fa-bug'"
+    :icon="'bug'"
     >My middle btn</v-button>
 
     <v-button 
@@ -35,7 +35,7 @@
           fontSize: '12px'
         }"
     :size="'sm'"
-    :icon="'fas fa-laptop-code'"
+    :icon="'laptop-code'"
     >My small btn</v-button>
 
     <v-button 
@@ -46,7 +46,7 @@
           fontSize: '10px'
         }"
     :size="'xs'"
-    :icon="'fas fa-terminal'"
+    :icon="'terminal'"
     >My xsmall btn</v-button>
     
     <router-view />
